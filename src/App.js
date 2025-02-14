@@ -1,13 +1,14 @@
-import Navigation from "./components/routes/navigation/navigation.component";
-import Home from "./components/routes/home/home.component";
+import Navigation from "./routes/navigation/navigation.component";
+import Home from "./routes/home/home.component";
 import { Routes, Route } from "react-router-dom";
-import Login from "./components/routes/login/login.component";
+import Login from "./routes/login/login.component";
+import { Shop } from "./routes/shop/shop.component";
 
 const App = () => (
   <Routes>
     <Route path="/" element={<Navigation />}>
       <Route index element={<Home />} />
-      <Route path="/shop" element={<h1>TODO</h1>} />
+      <Route path="/shop" element={<Shop />} />
       <Route path="/login" element={<Login />} />
     </Route>
   </Routes>

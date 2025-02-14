@@ -1,5 +1,5 @@
-import SignUpForm from "../../signup/signup-form.component"
-import SignInForm from "../../signin/signin-form.component";
+import SignUpForm from "../../components/signup/signup-form.component"
+import SignInForm from "../../components/signin/signin-form.component";
 import "./login.style.scss";
 
 const Login = () => (    
