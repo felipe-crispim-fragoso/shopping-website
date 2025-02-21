@@ -8,7 +8,6 @@ export const ShopDataContext = createContext({
 export const ShopDataProvider = ({ children }) => {
     const [shoppingData, setShoppingData] = useState(null); 
 
-    // defines callback to handle the login from firebase.
     useEffect(() => {
        setShoppingData(SHOP_DATA);
     }, [])

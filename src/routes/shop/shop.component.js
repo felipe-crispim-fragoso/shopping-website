@@ -1,15 +1,13 @@
 import { Fragment, useContext } from 'react';
 import { ShopDataContext } from '../../context/shop_data.context';
+import ProductCard from '../../components/product-card/product-card.component';
+import './shop.style.scss';
 
 export const Shop = () => {
     const { shoppingData } = useContext(ShopDataContext);
-    return <Fragment>
+    return <div className='products-container'>
     {
-        shoppingData.map(product => 
-            <div>
-                {product.name}
-            </div>
-        )
+        shoppingData && shoppingData.map(product => <ProductCard key={product.id} {...product}/> )
     }
-    </Fragment>
+    </div>
 }
