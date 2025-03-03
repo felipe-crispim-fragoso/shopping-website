@@ -4,10 +4,10 @@ import { ReactComponent as ShoppingIcon } from '../../assets/shopping-bag.svg';
 import { CartDropdownContext } from '../../context/cart-dropdown.context';
 
 const CartIcon = () => {
-    const { toggleCartList } = useContext(CartDropdownContext);
+    const { toggleCartList, cartItems } = useContext(CartDropdownContext);
     return <div className='cart-icon-container' onClick={toggleCartList}>
         <ShoppingIcon className='shopping-icon'/>
-        <span className='item-count'>0</span>
+        <span className='item-count'>{cartItems.reduce((total, item) => total + item.quantity, 0)}</span>
     </div>
 };
 

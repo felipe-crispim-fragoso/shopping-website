@@ -7,7 +7,7 @@ const Shop = () => {
     const { shoppingData } = useContext(ShopDataContext);
     return <div className='products-container'>
     {
-        shoppingData && shoppingData.map(product => <ProductCard key={product.id} {...product}/> )
+        shoppingData && shoppingData.map(product => <ProductCard key={product.id} product={product}/> )
     }
     </div>
 };
