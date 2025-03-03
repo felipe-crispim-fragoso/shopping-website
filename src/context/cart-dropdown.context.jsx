@@ -8,7 +8,6 @@ export const CartDropdownContext = createContext({
 export const CartDropdownProvider = ({ children }) => {
     const [isCartOpen, setCartOpen] = useState(false); 
     const toggleCartList = () => { 
-        console.log('eita');
         setCartOpen(prevState => !prevState);
     }
     return <CartDropdownContext.Provider value={{isCartOpen, toggleCartList}}>
